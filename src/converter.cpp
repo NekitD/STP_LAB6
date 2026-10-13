@@ -124,7 +124,7 @@ json yaml_node_to_json(const YAML::Node& node) {
     const std::string s = node.Scalar();
     const std::string ls = lower(s);
     if (ls == "null" || s == "~") return nullptr;
-    if (ls == "true") return false; // ADD MISTAKE
+    if (ls == "true") return true; 
     if (ls == "false") return false;
     try {
         std::size_t used = 0;
